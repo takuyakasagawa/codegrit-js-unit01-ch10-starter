@@ -28,18 +28,20 @@
     // Array.prototype.filter()
     // 1. filterを使ってスターウォーズのキャラクターのうち、現在60代のキャラクターだけを戻り値としてコンソールに返してみましょう。
     // ヒント：関数と演算子を使います。
-    const arr = characters.filter(age => {
-      return age => 60
-    }); 
-    
-    console.log(arr);
+    const sixty = characters.filter(character => (character.age >= 60 && character.age < 70));
+    console.table(sixty);
+      // 「アロー関数の基本構文」
+      // const 定数名/関数名 = function(引数) => {functionは省略されることが多い
+      //   実行内容
+      // }
+      // 定数名/関数名(引数);
     //arr.filter(コールバック関数);
 
     // Array.prototype.map()
     // 2. スターウォーズ登場人物で上記にある全員の苗字と下の名前の配列を戻り値としてコンソールに返してみましょう。
     // ヒント：関数と変数を使います。
-
-
+    const name = characters.filter(character => (character.first));
+    console.table(name);
 
     // スプレッド演算子 オブジェクトの追加
     // 3. スプレッド演算子を使って、ルークにジェダイの所属情報（オブジェクト）を追加しましょう。

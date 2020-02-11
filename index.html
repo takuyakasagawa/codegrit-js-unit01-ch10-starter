@@ -40,7 +40,7 @@
     // Array.prototype.map()
     // 2. スターウォーズ登場人物で上記にある全員の苗字と下の名前の配列を戻り値としてコンソールに返してみましょう。
     // ヒント：関数と変数を使います。
-    const name = characters.filter(character => (character.first));
+    const name = characters.map(character => (character.first + character.last));
     console.table(name);
 
     // スプレッド演算子 オブジェクトの追加

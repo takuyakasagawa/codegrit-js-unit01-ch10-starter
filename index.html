@@ -40,16 +40,19 @@
     // Array.prototype.map()
     // 2. スターウォーズ登場人物で上記にある全員の苗字と下の名前の配列を戻り値としてコンソールに返してみましょう。
     // ヒント：関数と変数を使います。
-    const name = characters.map(character => (character.first + character.last));
-    console.table(name);
-
+    //const name = characters.map(character => (character.first + ' ' + character.last));
+    const name = characters.map(character => `${character.first} ${character.last}`);
+    console.log(name);
+ 
     // スプレッド演算子 オブジェクトの追加
     // 3. スプレッド演算子を使って、ルークにジェダイの所属情報（オブジェクト）を追加しましょう。
-
+    
     // ヒント１：オブジェクトのクローンをコンソールにオブジェクトとして戻り値を返しましょう
-
+    const characterClone = {...characters};
+    console.log(characterClone);
     // ヒント２：プロパティを追加した新しいオブジェクトの生成をして、コンソールに戻り値を表示させましょう。
-
+    //const newCharacter = {...characters, };
+    //console.log(newCharacter);
   </script>
 </body>
 </html>
